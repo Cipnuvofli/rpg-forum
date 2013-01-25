@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html>/*This is no longer my focus, and unless you want to take this in a different direction, you can consider this deprecated*/
 <head>
   <meta charset="utf-8">
   <title>Quest[x].com</title>
