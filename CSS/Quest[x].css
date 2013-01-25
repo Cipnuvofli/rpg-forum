@@ -1,0 +1,64 @@
+
+
+#Username
+{
+	text-align:left;
+
+}
+#Password
+{
+	text-align:left;
+	
+}
+
+#Login
+{
+	text-align:left;
+	margin-left:5em;
+}
+
+#Stats
+{
+	text-align:left;
+
+}
+
+#Topics
+{
+	margin-bottom:10em;
+
+}
+
+input
+{
+
+color: #fff;
+background: #000;
+border: .25em outset #b19b37;
+text-align:center;
+}
+
+
+
+p
+{
+text-align:center;
+
+color:#b19b37;
+
+
+}
+
+a
+{
+text-align:center;
+
+}
+
+body
+{
+background-color:#000000;
+
+
+} 
+
