@@ -1,30 +1,88 @@
+a:link
+{
+	color:#7FFF00
+
+}
+a:visited
+{
+    color:#FFFF00
+
+}
+a:hover
+{
+	color:#FFFF00
+
+}
+a:active
+{
+    color:#FFFF00
+
+}
+#Logo
+{
+}
+#UserCard
+{
+	float:left;
+	height:17em;
+	width:15em;
+	margin-top: 7em;
+	border:.25em solid #ffffff; 
+	border-width:1px;
+
+}
+#Topics
+{
+	margin-left: 17em;
+	margin-top: 0.5em;
 
 
+}
+#TopicQuest
+{
+	border:.3em outset #003300;
+	background-color:#003300;
+	
+	
+}
+#TopicRoleplay
+{
+	border:.3em outset #680000;
+	background-color:#680000;
+
+}
 #Username
 {
 	text-align:left;
+	margin-left:.5em;
 
 }
 #Password
 {
 	text-align:left;
-	
+	margin-left:.5em;
 }
 
 #Login
 {
 	text-align:left;
-	margin-left:5em;
+	margin-left:5.4em;
 }
 
 #Stats
 {
 	text-align:left;
+	margin-left:.5em;
 
+}
+#LoginLinks
+{
+	margin-left:.5em;
 }
 
 #Topics
 {
+
 	margin-bottom:10em;
 
 }

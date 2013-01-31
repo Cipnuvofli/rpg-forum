@@ -31,7 +31,9 @@
  <p id = "Password">Password: <input type="password" name="Password" /></p>
  <p id = "Login"><input type="submit" value="Log In" /></p>
 </form>
-
+<div id = "LoginLinks">
+ <a href="recovery.php">Forgot your Password?</a>     <a href "Register.php">Register</a> 
+</div>
 
 
 <p id = "Stats">Successful Write-ins: not logged in</p>
@@ -43,20 +45,23 @@
 
 <div id = "Topics">
 
-<div id = "TestTopic(Quest)">
-<p>I wanna be the Forum: The Quest(Setting: Real Life)</p>
+<div id = "TopicQuest">
+<p><a href = "Topic.php">I wanna be the Forum: The Quest(Setting: Real Life)</a></p>
+<p>Posted by: Conjured Blade</p>
+<p>Timestamp: 1/31/2013 at 12:51 PM</p>
+
 </div>
 
-<div id = "TestTopic(Roleplay)">
-<p>DND/World of Darkness/Exalted/Original Setting, Take your pick!</p>
+<div id = "TopicRoleplay">
+<p><a href = "Topic.php">DND/World of Darkness/Exalted/Original Setting, Take your pick!</a></p>
 </div>
 
-<div id = "TestTopic(Fanfiction)">
-<p>Bad Self-insertfic vol. 1</p>
+<div id = "TopicFanfiction/Fiction">
+<p><a href = "Topic.php">Bad Self-insertfic vol. 1</a></p>
 </div>
 
-<div id = "TestTopic(Generic)">
-<p>BlahBlahBlah</p>
+<div id = "TopicGeneric">
+<p><a href = "Topic.php">BlahBlahBlah</a></p>
 </div>
 
 </div>
