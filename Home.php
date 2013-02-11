@@ -32,13 +32,14 @@
  <p id = "Login"><input type="submit" value="Log In" /></p>
 </form>
 <div id = "LoginLinks">
- <a href="recovery.php">Forgot your Password?</a>     <a href "Register.php">Register</a> 
+ <a href="recovery.php">Forgot your Password?</a>     <a href="register.php">Register</a> 
 </div>
 
 
 <p id = "Stats">Successful Write-ins: not logged in</p>
 <p id = "Stats">Likes Received: not logged in</p>
 <p id = "Stats">Post Count: not logged in</p>
+<p id = "Stats">Character Sheets: not logged in</p>
 
 
 </div>
@@ -46,22 +47,53 @@
 <div id = "Topics">
 
 <div id = "TopicQuest">
+<div id = "StoryOnlyButton">
+<a href = "#">
+<p>Story 
+Only</p>
+</a>
+</div>
+<div id = "ThreadStatuses">
+<ul>
+<li>Stickied</li>
+<li>Locked</li>
+<ul>
+</div>
+<div id = "TopicContents">
 <p><a href = "Topic.php">I wanna be the Forum: The Quest(Setting: Real Life)</a></p>
 <p>Posted by: Conjured Blade</p>
 <p>Timestamp: 1/31/2013 at 12:51 PM</p>
-
+</div>
 </div>
 
 <div id = "TopicRoleplay">
+<div id = "TopicContents">
 <p><a href = "Topic.php">DND/World of Darkness/Exalted/Original Setting, Take your pick!</a></p>
+<p>Posted by: Conjured Blade</p>
+<p>Timestamp: 1/31/2013 at 12:52 PM</p>
+</div>
 </div>
 
-<div id = "TopicFanfiction/Fiction">
+<div id = "TopicFiction">
+<div id = "StoryOnlyButton">
+<a href = "#">
+<p>Story 
+Only</p>
+</a>
+</div>
+<div id = "TopicContents">
 <p><a href = "Topic.php">Bad Self-insertfic vol. 1</a></p>
+<p>Posted by: Conjured Blade</p>
+<p>Timestamp: 1/31/2013 at 12:53 PM</p>
+</div>
 </div>
 
 <div id = "TopicGeneric">
+<div id = "TopicContents">
 <p><a href = "Topic.php">BlahBlahBlah</a></p>
+<p>Posted by: Conjured Blade</p>
+<p>Timestamp: 1/31/2013 at 12:54 PM</p>
+</div>
 </div>
 
 </div>
