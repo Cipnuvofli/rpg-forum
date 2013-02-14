@@ -12,18 +12,46 @@
 
  <?php 
  
+session_start();
+ include_once $_SERVER['DOCUMENT_ROOT'] . 'quest[x]/securimage/securimage.php';
+$securimage = new Securimage();
+$con = mysql_connect("localhost","root","");
+if (!$con)
+  {
+  die('Could not connect: ' . mysql_error());
+  }
+  mysql_select_db("members", $con);
+ 
 $Birthday = $_POST['bday'];
 $Email = $_POST['usrEmail'];
 $name = $_POST['name'];
+$password = $_POST['Password'];
+$Captcha = $_POST['captcha_code'];
 
-$subject = "Validation Email";
-$Body = "Test validation Email";
-//This validation email test won't work on a WAMP server
- if (mail($Email, $subject, $Body)) {
-   echo("<p>Validation Email sent. Check your email to complete your registration.</p>");
-  } else {
-   echo("<p>Message delivery failed...</p>");
+
+if($securimage->check($Captcha) == true)
+{
+
+$sql="INSERT INTO users (birthday, email, Username)VALUES('$Birthday','$Email','$name')";
+}
+
+else
+{
+	echo "<p>The Captcha code entered was incorrect(Try enabling cookies).</p><br/><br/>";
+	exit;
+
+}
+
+if (!mysql_query($sql,$con))
+  {
+  die('Error: ' . mysql_error());
   }
+
+
+
+mysql_close($con);
+
+  
  ?>
  
  
@@ -31,7 +59,7 @@ $Body = "Test validation Email";
  
  
  
- ?> 
+
 
 
 <p><a href = "home.php">Return to main page.</a></p>
