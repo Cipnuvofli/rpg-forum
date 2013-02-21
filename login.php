@@ -2,45 +2,55 @@
 
 
 
-<head>
-  <meta charset="utf-8">
-  <title>Quest[x].com</title>
-  <meta name="description" content="Registration">
-  <link rel="stylesheet" type="text/css" href="CSS/Quest[x].css">
-</head>
 <?php 
 session_start();
-$con = mysql_connect("localhost","root","");
+$con = mysql_connect("localhost","root","Gwhnsf@76244");
+CRYPT_BLOWFISH or die ('<p>No Blowfish found.</p>');
+$Blowfish_Pre = '$2a$05$';
+$Blowfish_End = '$';
 if (!$con)
   {
   die('Could not connect: ' . mysql_error());
   }
   mysql_select_db("members", $con);
+if(isset($_SESSION['loggedin']))
+{
+	die("Already Logged in!");
+
+}
+if(isset($_POST('submit'))
+{
 $username = mysql_real_escape_string($_POST['Username']);
 $password = mysql_real_escape_string($_POST['Password']);
 
-$sql = "SELECT Username FROM users WHERE Username = '$username'";
+$sql = "SELECT Username, salt, password FROM users WHERE Username = '$username'";
 $result = mysql_query($sql) or die(mysql_error());
 $row = mysql_fetch_assoc($result);
+$_SESSION['loggedin'] = "YES";
+$_SESSION['name'] = $username;
 
-if($username == $row['Username'])
+
+
+$hashed_pass = crypt($password, $Blowfish_Pre.$row['salt'].$Blowfish_End);
+
+if($username == $row['Username'] && $hashed_pass == $row['password'])
 {
-	echo 'Username verified';
+	echo 'Login Successful!';
 }
 else
 {
-	echo 'Username issue';
+	echo 'Login Failure';
 }
 
 mysql_close($con);
-//what?
+header('Location: http://localhost/Quest[x]/home.php');
 
 
 
 
 ?>.
 
-<p><a href = "home.php">Return to main page.</a></p>
 
 
-</html>
+
+

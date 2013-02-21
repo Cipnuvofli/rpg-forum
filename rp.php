@@ -14,13 +14,14 @@
 session_start();
  include_once $_SERVER['DOCUMENT_ROOT'] . 'quest[x]/securimage/securimage.php';
 $securimage = new Securimage();
-$con = mysql_connect("localhost","root","");
+$con = mysql_connect("localhost","root","Gwhnsf@76244");
 if (!$con)
   {
   die('Could not connect: ' . mysql_error());
   }
   mysql_select_db("members", $con);
  //Special Thanks to Greg Bogg's tutorial on using blowfish hashing for Passwords
+$agreement = $_POST['rules'];
 $Birthday = mysql_real_escape_string($_POST['bday']);
 $Email = mysql_real_escape_string($_POST['usrEmail']);
 $name = mysql_real_escape_string($_POST['name']);
@@ -48,11 +49,18 @@ $hashed_password = crypt($password, $bcrypt_salt);
 $Captcha = $_POST['captcha_code'];
 
 
-if($securimage->check($Captcha) == true)
+if($securimage->check($Captcha) == true &&isset($agreement)&& $agreement == 'yes')
 {
+echo "<p>Registration Successful!.</p><br/><br/>";
+
 $sql="INSERT INTO users (Joindate, salt, password, birthday, email, Username)VALUES('$mysql_date', '$salt', '$hashed_password','$Birthday','$Email','$name')";
 }
+else if($agreement != 'yes')
+{
+	echo "<p>You must agree to the Forum rules to register.</p><br/><br/>";
+	exit;
 
+}
 else
 {
 	echo "<p>The Captcha code entered was incorrect(Try enabling cookies).</p><br/><br/>";
