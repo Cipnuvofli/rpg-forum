@@ -26,7 +26,7 @@
 
 <body>
 <div id = "UserCard">
-<form action="Login.php" method="post">
+<form action="login.php" method="post">
  <p id = "Username">Username: <input type="text" name="Username" /></p>
  <p id = "Password">Password: <input type="password" name="Password" /></p>
  <p id = "Login"><input type="submit" value="Log In" /></p>
