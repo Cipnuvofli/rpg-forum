@@ -40,7 +40,7 @@
 <p><a href="#" onclick="document.getElementById('captcha').src = 'securimage/securimage_show.php?' + Math.random(); return false">[ Different Image ]</a></p>
 
 <p>Do you agree to abide by the rules of this forum?</p>
-<p>Todo (Forum Rules):</p>
+<p><a href = "ForumRules.php">Forum Rules</a></p>
 <p> I Agree:<input type="checkbox" name="rules" value="yes"></p>
 <p><input type = "submit" value = "Register"></p>
 </form>

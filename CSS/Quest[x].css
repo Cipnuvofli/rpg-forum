@@ -22,48 +22,49 @@ a:active
 #UserCard
 {
 	float:left;
-	height:48em;
+	height:33em;
 	width:15em;
 	margin-top: 7em;
-	border:.25em solid #ffffff; 
+	border:.25em solid #b19b37; 
 	border-width:1px;
 
 }
 #Topics
 {
-	margin-left: 17em;
+	margin-left: 19em;
+	margin-right: 4em;
 	margin-top: 0.5em;
 
 
 }
 #TopicQuest
 {
-	border:.3em outset #003300;
+	border:.2em outset #b19b37;
 	background-color:#003300;
-	
 	
 	
 }
 #TopicContents
 {
+height:15em;
 	
 }
 #TopicRoleplay
 {
-	border:.3em outset #680000;
+	border:.2em outset #b19b37;
 	background-color:#680000;
 
 }
 #TopicFiction
 {
-	border:.3em outset #660099;
+	border:.2em outset #b19b37;
 	background-color: #660099;
 
 
 }
 #TopicGeneric
 {
-	border:.3em outset #343434;
+	border:.2em outset #b19b37;
 	background-color: #343434;
 
 }
@@ -103,6 +104,7 @@ a:active
 
 }
 
+
 input
 {
 
@@ -115,23 +117,38 @@ text-align:center;
 
 #StoryOnlyButton
 {
-float:left;
+margin-right:1em;
+float:right;
 border:.3em outset #ffffff;
-text-align:center
+text-align:center;
 
 }
 #ThreadStatuses
 {
-float:left;
+float:right;
 border:.3em outset #ffffff;
 text-align:center;
 
 }
+#AvatarPic
+{
+float:left;
+border:.3em outset #ffffff;
+text-align:center;
+}
+
+#RulesLayout
+{
+float:center;
+border:.3em outset #b19b37;
+text-align:left;
+}
+
 
 p
 {
-text-align:center;
-
+text-align:left;
+margin-left:2em;
 
 
 color:#b19b37;
@@ -139,6 +156,7 @@ color:#b19b37;
 
 
 }
+
 ul
 {
 text-align:center;

@@ -88,7 +88,7 @@ mysql_close($con);
 
 
 
-<p><a href = "home.php">Return to main page.</a></p>
+<p><a href = "home.php">Return to main page</a></p>
 
 
 </html>

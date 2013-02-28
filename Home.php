@@ -26,7 +26,7 @@
 
 <body>
 <div id = "UserCard">
-<form action="login.php" method="post">
+<form action="Login.php" method="post">
  <p id = "Username">Username: <input type="text" name="Username" /></p>
  <p id = "Password">Password: <input type="password" name="Password" /></p>
  <p id = "Login"><input type="submit" value="Log In" /></p>
@@ -47,60 +47,92 @@
 <div id = "Topics">
 
 <div id = "TopicQuest">
+<div id="header" style="background-color:#000000;margin-left:.3em;margin-right:.3em;">
+<h1><font size="5"><font color=#b19b37> Quest</font></font></h1></div>
 <div id = "StoryOnlyButton">
 <a href = "#">
-<p>Story 
-Only</p>
-</a>
+<button style="background-color:#000000;"type="button";><p>Story Only</p>
+</button></a>
 </div>
-<div id = "ThreadStatuses">
-<ul>
-<li>Stickied</li>
-<li>Locked</li>
-<ul>
-</div>
+
 <div id = "TopicContents">
-<p><a href = "Topic.php">I wanna be the Forum: The Quest(Setting: Real Life)</a></p>
+<p><a href = "Topic.php">Quest Topic</a></p>
 <p>Posted by: Conjured Blade</p>
 <p>Timestamp: 1/31/2013 at 12:51 PM</p>
+
+<p><a href ="Topic.php">Quest Topic</a></p>
+<p>Posted by: KingSmith</p>
+<p>Timestamp: 2/27/2013 at 8:57 PM</p>
+
 </div>
 </div>
 
 <div id = "TopicRoleplay">
+<div id="header" style="background-color:#000000;">
+<h1><font size="5"><font color=#b19b37>Roleplay</font></font></h1></div>
+<div id = "StoryOnlyButton">
+<a href = "#">
+<button style="background-color:#000000;"type="button";><p>Story Only</p>
+</button>
+</a>
+</div>
+
 <div id = "TopicContents">
-<p><a href = "Topic.php">DND/World of Darkness/Exalted/Original Setting, Take your pick!</a></p>
+<p><a href = "Topic.php">Roleplay Topic</a></p>
 <p>Posted by: Conjured Blade</p>
 <p>Timestamp: 1/31/2013 at 12:52 PM</p>
+
+<p><a href ="Topic.php">Roleplay Topic</a></p>
+<p>Posted by: KingSmith</p>
+<p>Timestamp: 2/27/2013 at 8:57 PM</p>
 </div>
 </div>
 
 <div id = "TopicFiction">
+<div id="header" style="background-color:#000000;">
+<h1><font size="5"><font color=#b19b37>Fiction</font></font></h1></div>
 <div id = "StoryOnlyButton">
 <a href = "#">
-<p>Story 
-Only</p>
+<button style="background-color:#000000;"type="button";><p>Story Only</p></button>
 </a>
 </div>
+
 <div id = "TopicContents">
-<p><a href = "Topic.php">Bad Self-insertfic vol. 1</a></p>
+<p><a href = "Topic.php">Fiction Topic</a></p>
 <p>Posted by: Conjured Blade</p>
 <p>Timestamp: 1/31/2013 at 12:53 PM</p>
+
+<p><a href ="Topic.php">Fiction Topic</a></p>
+<p>Posted by: KingSmith</p>
+<p>Timestamp: 2/27/2013 at 8:57 PM</p>
 </div>
 </div>
 
 <div id = "TopicGeneric">
+<div id="header" style="background-color:#000000;">
+<h1><font size="5"><font color=#b19b37>Generic</font></font></h1></div>
+<div id = "StoryOnlyButton">
+<a href = "#">
+<button style="background-color:#000000;"type="button";><p>Story Only</p>
+</button>
+</a>
+</div>
+
 <div id = "TopicContents">
-<p><a href = "Topic.php">BlahBlahBlah</a></p>
+<p><a href = "Topic.php">Generic Topic</a></p>
 <p>Posted by: Conjured Blade</p>
 <p>Timestamp: 1/31/2013 at 12:54 PM</p>
+
+<p><a href ="Topic.php">Generic Topic</a></p>
+<p>Posted by: KingSmith</p>
+<p>Timestamp: 2/27/2013 at 8:57 PM</p>
 </div>
 </div>
 
 </div>
 
 
-<footer>
-	<p>Forum created by Joseph Penrod and Steven White</p>
-</footer>
+<div id="footer" style =color:#b19b37;clear:both;text-align:center;">
+Forum created by Joseph Penrod and Steven White </div>
 </body>
 </html> 
