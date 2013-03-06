@@ -18,8 +18,7 @@ if(isset($_SESSION['loggedin']))
 	die("Already Logged in!");
 
 }
-if(isset($_POST('submit'))
-{
+
 $username = mysql_real_escape_string($_POST['Username']);
 $password = mysql_real_escape_string($_POST['Password']);
 
@@ -35,15 +34,14 @@ $hashed_pass = crypt($password, $Blowfish_Pre.$row['salt'].$Blowfish_End);
 
 if($username == $row['Username'] && $hashed_pass == $row['password'])
 {
-	echo 'Login Successful!';
+	echo '<p>Login Successful!</p>';
 }
 else
 {
-	echo 'Login Failure';
+	echo '<p>Login Failure</P>';
 }
-
 mysql_close($con);
-header('Location: http://localhost/Quest[x]/home.php');
+
 
 
 

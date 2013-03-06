@@ -25,25 +25,45 @@
 
 
 <body>
-<div id = "UserCard">
-<form action="Login.php" method="post">
- <p id = "Username">Username: <input type="text" name="Username" /></p>
- <p id = "Password">Password: <input type="password" name="Password" /></p>
- <p id = "Login"><input type="submit" value="Log In" /></p>
-</form>
-<div id = "LoginLinks">
- <a href="recovery.php">Forgot your Password?</a>     <a href="register.php">Register</a> 
-</div>
+
+<?php
+session_start();
+if(isset($_SESSION['loggedin']))
+{
+	echo '<div id = "UserCard">';
+	echo '<p id =  "Username">Logged in as: '.$_SESSION['name'];
+	
+	echo'<p id = "Stats">Successful Write-ins:TODO</p>';
+	echo '<p id = "Stats">Likes Received: TODO</p>';
+	echo '<p id = "Stats">Post Count: TODO</p>';
+	echo '<p id = "Stats">Character Sheets: TODO</p>';
+	
 
 
-<p id = "Stats">Successful Write-ins: not logged in</p>
-<p id = "Stats">Likes Received: not logged in</p>
-<p id = "Stats">Post Count: not logged in</p>
-<p id = "Stats">Character Sheets: not logged in</p>
+
+}
 
 
-</div>
+else
+{
+echo '<div id = "UserCard">';
+echo '<form action="Login.php" method="post">';
+echo '<p id = "Username">Username: <input type="text" name="Username" /></p>';
+echo ' <p id = "Password">Password: <input type="password" name="Password" /></p>';
+echo ' <p id = "Login"><input type="submit" value="Log In" /></p>';
+echo '</form>';
+echo '<div id = "LoginLinks">';
+echo ' <a href="recovery.php">Forgot your Password?</a>     <a href="register.php">Register</a> ';
+echo '</div>';
 
+
+echo'<p id = "Stats">Successful Write-ins: not logged in</p>';
+echo '<p id = "Stats">Likes Received: not logged in</p>';
+echo '<p id = "Stats">Post Count: not logged in</p>';
+echo '<p id = "Stats">Character Sheets: not logged in</p>';
+echo '</div>';
+}
+?>.
 <div id = "Topics">
 
 <div id = "TopicQuest">
