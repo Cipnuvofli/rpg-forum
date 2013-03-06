@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 
 
-
-<?php 
+ <?php 
 session_start();
 $con = mysql_connect("localhost","root","Gwhnsf@76244");
 CRYPT_BLOWFISH or die ('<p>No Blowfish found.</p>');
@@ -18,10 +17,10 @@ if(isset($_SESSION['loggedin']))
 	die("Already Logged in!");
 
 }
-if(isset($_POST('submit'))
+if(isset($_POST['submit']) == TRUE)
 {
 $username = mysql_real_escape_string($_POST['Username']);
-$password = mysql_real_escape_string($_POST['Password']);
+$password = mysql_real_escape_string($_POST['password']);
 
 $sql = "SELECT Username, salt, password FROM users WHERE Username = '$username'";
 $result = mysql_query($sql) or die(mysql_error());
@@ -45,12 +44,4 @@ else
 mysql_close($con);
 header('Location: http://localhost/Quest[x]/home.php');
 
-
-
-
-?>.
-
-
-
-
-
+ ?> 
