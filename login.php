@@ -22,12 +22,14 @@ if(isset($_SESSION['loggedin']))
 $username = mysql_real_escape_string($_POST['Username']);
 $password = mysql_real_escape_string($_POST['Password']);
 
+
 $sql = "SELECT Username, salt, password FROM users WHERE Username = '$username'";
 $result = mysql_query($sql) or die(mysql_error());
 $row = mysql_fetch_assoc($result);
-$_SESSION['loggedin'] = "YES";
-$_SESSION['name'] = $username;
 
+$writeins = $row['Writeins'];
+$likes = $row['Likes received'];
+$postcount = $row['Postcount'];
 
 
 $hashed_pass = crypt($password, $Blowfish_Pre.$row['salt'].$Blowfish_End);
@@ -35,6 +37,10 @@ $hashed_pass = crypt($password, $Blowfish_Pre.$row['salt'].$Blowfish_End);
 if($username == $row['Username'] && $hashed_pass == $row['password'])
 {
 	echo '<p>Login Successful!</p>';
+	$_SESSION['loggedin'] = "YES";
+	$_SESSION['name'] = $username;
+	$_SESSION['writeins'] = $writeins;
+	$_SESSION['postcount'] = $postcount;
 }
 else
 {

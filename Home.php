@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <head>
   <meta charset="utf-8">
   <title>Quest[x].com</title>
@@ -33,11 +34,11 @@ if(isset($_SESSION['loggedin']))
 	echo '<div id = "UserCard">';
 	echo '<p id =  "Username">Logged in as: '.$_SESSION['name'];
 	
-	echo'<p id = "Stats">Successful Write-ins:TODO</p>';
-	echo '<p id = "Stats">Likes Received: TODO</p>';
-	echo '<p id = "Stats">Post Count: TODO</p>';
+	echo'<p id = "Stats">Successful Write-ins: '.$_SESSION['writeins'].'</p>';
+	echo '<p id = "Stats">Likes Received: '.$_SESSION['likes'].'</p>';
+	echo '<p id = "Stats">Post Count: '.$_SESSION['postcount'].'</p>';
 	echo '<p id = "Stats">Character Sheets: TODO</p>';
-	
+	echo '</div>';
 
 
 
