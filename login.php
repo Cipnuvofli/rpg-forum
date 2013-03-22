@@ -19,10 +19,10 @@ if(isset($_SESSION['loggedin']))
 }
 
 $username = mysql_real_escape_string($_POST['Username']);
-$password = mysql_real_escape_string($_POST['password']);
+$password = mysql_real_escape_string($_POST['Password']);
 
 
-$sql = "SELECT Username, salt, password FROM users WHERE Username = '$username'";
+$sql = "SELECT Username, salt, password, Writeins, Likes received, Postcount FROM users WHERE Username = '$username'";
 $result = mysql_query($sql) or die(mysql_error());
 $row = mysql_fetch_assoc($result);
 
@@ -39,6 +39,7 @@ if($username == $row['Username'] && $hashed_pass == $row['password'])
 	$_SESSION['loggedin'] = "YES";
 	$_SESSION['name'] = $username;
 	$_SESSION['writeins'] = $writeins;
+	$_SESSION['Likes received'] = $likes;
 	$_SESSION['postcount'] = $postcount;
 }
 else

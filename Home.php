@@ -35,7 +35,7 @@ if(isset($_SESSION['loggedin']))
 	echo '<p id =  "Username">Logged in as: '.$_SESSION['name'];
 	
 	echo'<p id = "Stats">Successful Write-ins: '.$_SESSION['writeins'].'</p>';
-	echo '<p id = "Stats">Likes Received: '.$_SESSION['likes'].'</p>';
+	echo '<p id = "Stats">Likes Received: '.$_SESSION['Likes received'].'</p>';
 	echo '<p id = "Stats">Post Count: '.$_SESSION['postcount'].'</p>';
 	echo '<p id = "Stats">Character Sheets: TODO</p>';
 	echo '</div>';
