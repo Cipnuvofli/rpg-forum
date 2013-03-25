@@ -42,7 +42,7 @@ class Thread
 	
 		if(isset($params['postDate']))
 		{
-			$postDate = explode('-', $params['publicationDate']);
+			$postDate = explode('-', $params['postDate']);
 			
 			if(count($postDate) == 3)
 			{
@@ -91,7 +91,7 @@ class Thread
 	}
 	public function insert()
 	{
-		 if ( !is_null( $this->id ) ) trigger_error ( "Article::insert(): Attempt to insert an Article object that already has its ID property set (to $this->id).", E_USER_ERROR );
+		 if ( !is_null( $this->id ) ) trigger_error ( "Thread::insert(): Attempt to insert a Thread object that already has its ID property set (to $this->id).", E_USER_ERROR );
 
     $conn = new PDO("localhost","root","Gwhnsf@76244");
     $sql = "INSERT INTO Threads ( postDate, title, originalposter, locked) VALUES ( FROM_UNIXTIME(:postDate), :title, :originalposter, :locked )";
@@ -99,7 +99,7 @@ class Thread
     $st->bindValue( ":postDate", $this->postDate, PDO::PARAM_INT );
     $st->bindValue( ":title", $this->title, PDO::PARAM_STR );
     $st->bindValue( ":originalposter", $this->originalposter, PDO::PARAM_STR );
-    $st->bindValue( ":locked", $this->content, PDO::PARAM_BOOL );
+    $st->bindValue( ":locked", $this->locked, PDO::PARAM_BOOL );
     $st->execute();
     $this->id = $conn->lastInsertId();
     $conn = null;
@@ -112,12 +112,12 @@ class Thread
 		  if (is_null($this->id)) trigger_error ("Thread::update(): Attempt to update a Thread object that does not have its ID property set.", E_USER_ERROR);
    
     $conn = new PDO("localhost","root","Gwhnsf@76244");
-    $sql = "UPDATE threads SET publicationDate=FROM_UNIXTIME(:publicationDate), title=:title, summary=:summary, content=:content WHERE id = :id";
+    $sql = "UPDATE threads SET postDate=FROM_UNIXTIME(:postDate), title=:title, originalposter=:originalposter, locked=:locked WHERE id = :id";
     $st = $conn->prepare ( $sql );
-    $st->bindValue( ":publicationDate", $this->publicationDate, PDO::PARAM_INT );
+    $st->bindValue( ":postDate", $this->postDate, PDO::PARAM_INT );
     $st->bindValue( ":title", $this->title, PDO::PARAM_STR );
-    $st->bindValue( ":summary", $this->summary, PDO::PARAM_STR );
-    $st->bindValue( ":content", $this->content, PDO::PARAM_STR );
+    $st->bindValue( ":originalposter", $this->originalposter, PDO::PARAM_STR );
+    $st->bindValue( ":locked", $this->locked, PDO::PARAM_BOOL);
     $st->bindValue( ":id", $this->id, PDO::PARAM_INT );
     $st->execute();
     $conn = null;
@@ -128,7 +128,6 @@ class Thread
 	{
 		if (is_null($this->id)) trigger_error ( "Thread::delete(): Attempt to delete a Thread object that does not have its ID property set.", E_USER_ERROR );
 
-    // Delete the Article
     $conn = new PDO("localhost","root","Gwhnsf@76244");
     $st = $conn->prepare ( "DELETE FROM threads WHERE id = :id LIMIT 1" );
     $st->bindValue( ":id", $this->id, PDO::PARAM_INT );
