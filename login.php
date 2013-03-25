@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 
 
  <?php 
@@ -22,7 +22,7 @@ $username = mysql_real_escape_string($_POST['Username']);
 $password = mysql_real_escape_string($_POST['Password']);
 
 
-$sql = "SELECT Username, salt, password, Writeins, Likes received, Postcount FROM users WHERE Username = '$username'";
+$sql = "SELECT Username, salt, password, Writeins, `Likes received`, Postcount FROM users WHERE Username = '$username'";
 $result = mysql_query($sql) or die(mysql_error());
 $row = mysql_fetch_assoc($result);
 
