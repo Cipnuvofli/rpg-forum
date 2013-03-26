@@ -65,6 +65,12 @@ echo '<p id = "Stats">Character Sheets: not logged in</p>';
 echo '</div>';
 }
 ?>.
+<div id = "PostThread">
+<a href = "CreateThread.php"></a>
+<button style="background-color:#000000;"type="button";><p>Create Thread</p>
+</button>
+</div>
+
 <div id = "Topics">
 
 <div id = "TopicQuest">
