@@ -1,6 +1,11 @@
 <?php
 
-<table>
+while($row = mysql_fetch_row($result))
+{
+	
+
+
+}
 
 
 ?>
