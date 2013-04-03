@@ -4,13 +4,9 @@
 class Thread
 {
 	public $id = null;
-	
 	public $postDate = null;
-	
 	public $title = null;
-	
 	public $originalPoster = null;
-	
 	public $locked = null;
 	
 	public function_construct($data = array())
@@ -39,16 +35,13 @@ class Thread
 	public function storeThreadValues($params)
 	{
 		$this->_construct($params);
-	
 		if(isset($params['postDate']))
 		{
 			$postDate = explode('-', $params['postDate']);
-			
 			if(count($postDate) == 3)
 			{
 				list($y,$m,$d) = $postDate;
 				$this->postDate = mktime(0,0,0,$m,$d,$y);
-		
 			}
 		}
 	}
