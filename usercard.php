@@ -9,6 +9,8 @@ if(isset($_SESSION['loggedin']))
         echo '<p id = "Stats">Likes Received: '.$_SESSION['Likes received'].'</p>';
         echo '<p id = "Stats">Post Count: '.$_SESSION['postcount'].'</p>';
         echo '<p id = "Stats">Character Sheets: TODO</p>';
+		
+		echo '<p id = "Login"><a href = "logout.php">Log out</a></p>';
         echo '</div>';
 }
 

@@ -41,10 +41,12 @@ if($username == $row['Username'] && $hashed_pass == $row['password'])
 	$_SESSION['writeins'] = $writeins;
 	$_SESSION['Likes received'] = $likes;
 	$_SESSION['postcount'] = $postcount;
+	echo'<a href = "Home.php">go to home page</a>';
 }
 else
 {
 	echo '<p>Login Failure</P>';
+	echo '<a href = "Home.php">go to home page</a>';
 }
 mysql_close($con);
 
