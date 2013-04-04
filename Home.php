@@ -4,8 +4,6 @@
 
 
 <div id="Buttons">
-<font size="4"><p>First Time Here? Visit Out Tutorial!</p>
-</font>
 <button style="background-color:#000000;margin-left:4.5em" type="button"; onClick="location.href='CreateThread.php'";><p>Create Thread</p>
 </button>
 <button style="background-color:#000000;margin-left:2em"; type="button"; onClick="location.href='tutorial.php'";><p>Tutorial</p>
