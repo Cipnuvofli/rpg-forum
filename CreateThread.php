@@ -32,12 +32,12 @@
 </div>
 <div style="border:.3em outset #b19b37;margin-top:5em;margin-left:15em;margin-right:15em">
 
-<form action="thread.php" method="get">
+<form action="Threadinsert.php" method="post">
 	<font size="4" style="color:#FFFFFF;margin-left:1.7em"> Title: <input type="text" name="Title" size="60" style="margin-left:.5em;margin-top:1em"><br>
 	</font>
 	
 	<textarea name="ThreadStory" cols="52" rows="6" style="margin-left:2em">Create story here...</textarea><br>
-	<select style="margin-left:2em;margin-bottom:2em">
+	<select name = "Genre" style="margin-left:2em;margin-bottom:2em">
 		<option>Select Genre</option>
 		<option value="Quest">Quest</option>
 		<option value="Roleplay">Roleplay</option>
