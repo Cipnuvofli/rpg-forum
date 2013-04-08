@@ -29,13 +29,20 @@ a:active
 	border-width:1px;
 
 }
+#UCAvatar
+{
+	float:center;
+}
+#Avatarchange
+{
+	float:center;
+}
 #Topics
 {
 	margin-left: 19em;
 	margin-right: 4em;
 	margin-top: 0.5em;
-
-
+	height:15em;
 }
 #TopicQuest
 {
@@ -44,11 +51,7 @@ a:active
 	
 	
 }
-#TopicContents
-{
-height:15em;
-	
-}
+
 #TopicRoleplay
 {
 	border:.2em outset #b19b37;
@@ -99,9 +102,7 @@ height:15em;
 
 #Topics
 {
-
-	margin-bottom:10em;
-
+margin-bottom:10em;
 }
 
 
@@ -144,36 +145,46 @@ border:.3em outset #b19b37;
 text-align:left;
 }
 
+#header
+{
+color:#b19b37;
+text-align:center;
+border:.3em outset #b19b37;
+margin-left:20em;
+margin-right:20em;
+font-size: xx-large;
+
+}
+
+#threadpane
+{
+border:.3em outset #b19b37;
+margin-top:5em;
+margin-left:15em;
+margin-right:15em
+
+}
 
 p
 {
 text-align:left;
 margin-left:2em;
-
-
 color:#b19b37;
-
-
-
 }
 
 ul
 {
 text-align:center;
 color:#b19b37;
-
 }
 
 a
 {
 text-align:center;
-
 }
 
 body
 {
 background-color:#000000;
-
-
 } 
 
