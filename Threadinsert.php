@@ -19,11 +19,7 @@ $sql = "INSERT INTO topics (title,  postdate, genre, originalposter)VALUES('$tit
 $result = mysql_query($sql) or die(mysql_error());
 
 
-
-
-
 mysql_close($con);
-
 
 header("Location: Home.php");
 ?>
