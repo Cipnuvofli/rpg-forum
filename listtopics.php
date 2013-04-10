@@ -8,7 +8,7 @@ if (!$con)
   }
   mysql_select_db("threads", $con);
 
-$sql = "SELECT postdate, title, originalposter, genre, id FROM topics";
+$sql = "SELECT postdate, title, originalposter, genre FROM topics";
 $result = mysql_query($sql) or die(mysql_error());
 
 echo '<div id = "Topics">';
@@ -19,53 +19,49 @@ while($row = mysql_fetch_assoc($result))
 	$title = $row['title'];
 	$originalposter = $row['originalposter'];
 	$genre = $row['genre'];
-	$id = $row['id'];
 	if($genre == 'Generic')
 	{
-		echo '<div id = "TopicGeneric">';
+
+		echo '<div class = "TopicGeneric">';
 		echo '<p><a href = "Topic.php?threadid='.$id.'">'.$title.'</a></p>';
 		echo '<p>Posted by:'.$originalposter.'</p>';
 		echo '<p>Original Post Date: '.$postdate.'</p>';
+		echo '</div>';
 		echo '</div>';
 
 	}
 	if($genre == 'Quest')
 	{
-		echo '<div id = "TopicQuest">';
-		echo '<p><a href = "Topic.php?threadid='.$id.'">'.$title.'</a></p>';
+
+		echo '<div class = "TopicQuest">';
+		echo '<p><a href = "Topic.php?threadid='.$id.'&storyonly=0">'.$title.'</a></p><div class = "StoryOnlyLink"><a href = "Topic.php?threadid='.$id.'&storyonly=1">Story Only</a></div>';
 		echo '<p>Posted by:'.$originalposter.'</p>';
 		echo '<p>Original Post Date: '.$postdate.'</p>';
-		echo '<div id = "StoryOnlyButton">';
-		echo '<button style= "background-color: #000000" type="button" value="Story Only">';
-		echo '</button>';
-		echo '</div>';
 		echo '</div>';
 		
 	}
 	if($genre == 'Fiction')
 	{
-		echo '<div id = "TopicFiction">';
-		echo '<p><a href = "Topic.php?threadid='.$id.'">'.$title.'</a></p>';
+		echo '<div class = "TopicFiction">';
+		echo '<p><a href = "Topic.php?threadid='.$id.'&storyonly=0">'.$title.'</a></p><div class = "StoryOnlyLink"><a href = "Topic.php?threadid='.$id.'&storyonly=1">Story Only</a></div>';
 		echo '<p>Posted by:'.$originalposter.'</p>';
 		echo '<p>Original Post Date: '.$postdate.'</p>';
-		echo '<div id = "StoryOnlyButton">';
-		echo '<button style= "background-color: #000000" type="button" value="Story Only">';
-		echo '</button>';
-		echo '</div>';
 		echo '</div>';
 	}
 	if($genre == 'Roleplay')
 	{
-		echo '<div id = "TopicRoleplay">';
+
+		echo '<div class = "TopicRoleplay">';
 		echo '<p><a href = "Topic.php?threadid='.$id.'">'.$title.'</a></p>';
 		echo '<p>Posted by:'.$originalposter.'</p>';
 		echo '<p>Original Post Date: '.$postdate.'</p>';
+		echo '</div>';
 		echo '</div>';
 	}
 
 
 }
 echo '</div>';
-mysql_close($con);  
+mysql_close($con);
 
 ?>
