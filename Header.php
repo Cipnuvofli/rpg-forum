@@ -3,16 +3,15 @@
 <!DOCTYPE html>
 <html lang = "en">
 <head>
-		<meta charset="utf-8">
-		<title>Quest[x].com</title>
-		 <meta name="description" content="The Message Board Designed from the ground up for Play by post roleplaying.">
-        <link rel = "stylesheet" type="text/css" href ="CSS/Quest[x].css">
+        <title>Quest[x].com</title>
+        <link rel = "stylesheet" type="text/css" href ="CSS/Quest[x].css"/>
 </head>
 
 <body>
+        <div id = "container">
        
         <a href = "home.php"  style="color: rgb(0,0,0)">
-        <canvas id="Logo" width="320" height="100"></canvas>
+        <canvas id="Logo" width="320" height="100" alt="Quest[x].com"></canvas>
         <script>
     var canvas = document.getElementById('Logo');
     var context = canvas.getContext('2d');
