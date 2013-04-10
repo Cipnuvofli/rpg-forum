@@ -2,7 +2,7 @@
 session_start();
 if(isset($_SESSION['loggedin']))
 {
-        echo '<div id = "UserCard">\n';
+        echo '<div id = "UserCard">';
 		echo '<p id = "UCAvatar"><img src="'.$_SESSION['Avatar'].'" alt = "User Avatar"></p>';
         echo '<p id =  "Username">Logged in as: '.$_SESSION['name'].'</p>';
        

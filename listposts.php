@@ -8,9 +8,9 @@ if (!$con)
   }
   mysql_select_db("threads", $con);
 
+
   
-  
-$id = "Select id FROM topics WHERE title = $ ";
+$id = "Select id FROM topics WHERE id = $ ";
   
 $sql = "SELECT postdate, title, originalposter, update FROM posts WHERE Threadid = $id";
 $result = mysql_query($sql) or die(mysql_error());
