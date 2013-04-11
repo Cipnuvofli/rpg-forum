@@ -1,6 +1,6 @@
 
 <ul id="menu-bar">
- <li class="active"><a href="#">Home</a></li>
+ <li><a href="home.php">Home</a></li>
  <li><a href="#">Test</a></li>
  <li><a href="Tutorial.php">Tutorial</a></li>
  <?php
