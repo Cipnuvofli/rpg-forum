@@ -6,11 +6,12 @@ if(isset($_SESSION['loggedin']))
 		echo '<p id = "UCAvatar"><img src="'.$_SESSION['Avatar'].'" alt = "User Avatar"></p>';
         echo '<p id =  "Username">Logged in as: '.$_SESSION['name'].'</p>';
        
-        echo'<p id = "Stats">Successful Write-ins: '.$_SESSION['writeins'].'</p>';
-        echo '<p id = "Stats">Likes Received: '.$_SESSION['Likes received'].'</p>';
-        echo '<p id = "Stats">Post Count: '.$_SESSION['postcount'].'</p>';
-        echo '<p id = "Stats">Character Sheets: TODO</p>';
+        echo'<p class = "Stats">Successful Write-ins: '.$_SESSION['writeins'].'</p>';
+        echo '<p class  = "Stats">Likes Received: '.$_SESSION['Likes received'].'</p>';
+        echo '<p class  = "Stats">Post Count: '.$_SESSION['postcount'].'</p>';
+        echo '<p class  = "Stats">Character Sheets: TODO</p>';
 		
+		echo '<p id = "Avatarchange"><a href = "personal.php">Change my Avatar/Sig</a></p>';
 		echo '<p id = "Login"><a href = "logout.php">Log out</a></p>';
         echo '</div>';
 }
@@ -28,10 +29,10 @@ echo ' <a href="recovery.php">Forgot your Password?</a>     <a href="register.ph
 echo '</div>';
 
 
-echo'<p id = "Stats">Successful Write-ins: not logged in</p>';
-echo '<p id = "Stats">Likes Received: not logged in</p>';
-echo '<p id = "Stats">Post Count: not logged in</p>';
-echo '<p id = "Stats">Character Sheets: not logged in</p>';
+echo'<p class  = "Stats">Successful Write-ins: not logged in</p>';
+echo '<p class  = "Stats">Likes Received: not logged in</p>';
+echo '<p class  = "Stats">Post Count: not logged in</p>';
+echo '<p class  = "Stats">Character Sheets: not logged in</p>';
 echo '</div>';
 }
 
