@@ -34,7 +34,7 @@ while($row = mysql_fetch_assoc($result))
 	{
 
 		echo '<div class = "TopicQuest">';
-		echo '<p><a href = "Topic.php?threadid='.$id.'&storyonly=0">'.$title.'</a></p><div class = "StoryOnlyLink"><a href = "Topic.php?threadid='.$id.'&storyonly=1">Story Only</a></div>';
+		echo '<p><a href = "Topic.php?threadid='.$id.'">'.$title.'</a></p><div class = "StoryOnlyLink"><a href = "Topic.php?threadid='.$id.'">Story Only</a></div>';
 		echo '<p>Posted by:'.$originalposter.'</p>';
 		echo '<p>Original Post Date: '.$postdate.'</p>';
 		echo '</div>';
@@ -43,7 +43,7 @@ while($row = mysql_fetch_assoc($result))
 	if($genre == 'Fiction')
 	{
 		echo '<div class = "TopicFiction">';
-		echo '<p><a href = "Topic.php?threadid='.$id.'&storyonly=0">'.$title.'</a></p><div class = "StoryOnlyLink"><a href = "Topic.php?threadid='.$id.'&storyonly=1">Story Only</a></div>';
+		echo '<p><a href = "Topic.php?threadid='.$id.'">'.$title.'</a></p><div class = "StoryOnlyLink"><a href = "Topic.php?threadid='.$id.'">Story Only</a></div>';
 		echo '<p>Posted by:'.$originalposter.'</p>';
 		echo '<p>Original Post Date: '.$postdate.'</p>';
 		echo '</div>';
