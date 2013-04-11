@@ -1,4 +1,8 @@
-<?php include "Header.php" ?>
+<?php include "Header.php"?>
+
+<?php include "usercard.php"?>
+
+<?php include "ButtonPanel.php"?>
 
 <body>
 

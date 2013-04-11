@@ -1,5 +1,10 @@
 <?php include "Header.php"?>
 
+<?php include "usercard.php"?>
+
+<?php include "ButtonPanel.php"?>
+
+
 
 <p id = "header">Create Thread</p>
 
