@@ -1,11 +1,13 @@
-<?php
 
+<ul id="menu-bar">
+ <li><a href="home.php">Home</a></li>
+ <li><a href="#">Test</a></li>
+ <li><a href="Tutorial.php">Tutorial</a></li>
+ <?php
+ if(isset($_SESSION['loggedin']))
+ {
+	echo '<li><a href="CreateThread.php">Create Thread</a></li>';
+ }
+ ?>
+</ul>
 
-if(isset($_SESSION['loggedin']))
-{
-echo'<a href = "CreateThread.php" class = "Upperlinks">Create Thread</a>';
-}
-?>
-
-
-<a href = "Tutorial.php" class = "Upperlinks">Tutorial</a>
