@@ -12,18 +12,19 @@
 <body>
        
         <a href = "home.php"  style="color: rgb(0,0,0)">
-        <canvas id="Logo" width="320" height="100"></canvas>
+        <canvas id="Logo" width="320" height="100" style="border:.2em outset #b19b37"></canvas>
         <script>
     var canvas = document.getElementById('Logo');
     var context = canvas.getContext('2d');
         var x = canvas.width / 2;
     var y = canvas.height / 2;
        
-        context.font="2.5em Helvetica";
+        context.font="3em Helvetica";
         context.textAlign = 'center';
         context.textBaseline = 'middle';
-        context.fillStyle = "#b19b37"
-        context.fillText("Quest[x].com",x,y);
+        context.strokeStyle = "#b19b37"
+        context.strokeText("Quest[x].com",x,y);
+
 
   </script>
   </a>
