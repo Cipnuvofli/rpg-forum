@@ -13,31 +13,26 @@
 </div>
 
 <div id="steps">
-<font size="4"><p> Step 1) Log In </p><font size="3"><p>(If you do nto have an account, proceed to "Register")</p></font></font>
-<p><img border="0" style="margin-left:5em" src="Images/firstStep.jpg" alt="First" width="500" height="400"/></p>
+<font size="4" style="margin-left:2em" color="#b19b37"> What is Quest[x].com? </font><br>
+<font size="3" color="#C0C0C0" style="margin-left:3em"> Quest[x] is a online play-by-post RPG forum.  </font><br><br>
 
-<font size="4"><p> Step 2) Enter your information </p></font>
-<font size="4"><p> Answer the simple math problem to prove you are human </p></font>
-<p><img border="0" style="margin-left:5em" src="Images/secondStep.jpg" alt="Second" width="500" height="400"/></p>
+<font size="4" style="margin-left:2em" color="#b19b37"> Topics & Rules </font><br>
+<font size="3" color="#C0C0C0" style="margin-left:3em"> Quest[x] uses four different genres that make up the different types of 
+adventures users can createor join in. Quest, Role-Playing, Fiction, and Generic. </font><br><br>
 
-<font size="4"><p> Step 3) Read the Forum Rules, agree to them by checking the box & submit </p></font>
-<p><img border="0" style="margin-left:5em" src="Images/thirdStep.jpg" alt="Third" width="500" height="400"/></p>
+<font size="4"style="margin-left:2em" color="#b19b37"> How do you participate? </font><br>
+<font size="3" color="#C0C0C0" style="margin-left:3em"> After you create account, your first task can be either to join an active
+thread that another user has already created, or create your own thread for other users to join. </font><br><br>
 
-<font size="4"><p> Step 4) Go back to the home page & Log In </p></font>
-<p><img border="0" style="margin-left:5em" src="Images/firstStep.jpg" alt="First" width="500" height="400"/></p>
-
-<font size="4"><p> Step 5) Once you are logged in, you now have the option to Create a Thread </p></font>
-
-
+<font size="4"style="margin-left:2em" color="#b19b37"> Gamemaster: Roles & Duties </font><br>
+<font size="3" color="#C0C0C0" style="margin-left:3em"> The roles of the Gamemaster variey based on what type of adventure you want
+create. You can initiate the adventure with a start up sequences of events, set up the main character or characters, or have the users
+choose the details for you using the voting feature. </font><br><br>
 
 
+
+</div>
 </div>
 </body>
-
-<div>
-<a href = "Home.php">
-<button style="background-color:#000000;margin-left:42em" type="button";><p>Return Home</p>
-</button>
-</div>
 
 <?php include "footer.php" ?>
