@@ -22,11 +22,11 @@
 	<td><img src="Images/Avatars/4.jpg" height="150" width="150"/></td>
 	</tr>
 	<tr>
-	<td><input type="checkbox" name="avatar" value="0" style="vertical-align:middle"/></td>
-	<td><input type="checkbox" name="avatar" value="1" style="vertical-align:middle"/></td>
-	<td><input type="checkbox" name="avatar" value="2" style="vertical-align:middle"/></td>
-	<td><input type="checkbox" name="avatar" value="3" style="vertical-align:middle"/></td>
-	<td><input type="checkbox" name="avatar" value="4" style="vertical-align:middle"/></td>
+	<td><input type="checkbox" name="avatar" id="0" style="vertical-align:middle"/></td>
+	<td><input type="checkbox" name="avatar" id="1" style="vertical-align:middle"/></td>
+	<td><input type="checkbox" name="avatar" id="2" style="vertical-align:middle"/></td>
+	<td><input type="checkbox" name="avatar" id="3" style="vertical-align:middle"/></td>
+	<td><input type="checkbox" name="avatar" id="4" style="vertical-align:middle"/></td>
 	</tr>
 	</table><br><br>
 	
@@ -36,10 +36,14 @@
 	<font size="6" style="color:#b19b37;margin-left:9.5em"> Signature <br></font>
 	<font size="3" style="color:#C0C0C0;margin-left:20em"> Create your signature: </font><br><br>
 	
-
+	<font size="3" style="color:#b19b37;margin-left:20em"> Signature: <input type="text" name="signature" size="30" style="margin-left:.3em"></font>
+	<br><br>
 	
+	<input type="submit" value="Submit" style="margin-left:70em"><br>
 	
 	
 </form>
-</div>
+</div><br><br>
+
+<?php include "footer.php" ?>
 	

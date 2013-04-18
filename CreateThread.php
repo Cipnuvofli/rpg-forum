@@ -38,8 +38,6 @@
 	
 
 </form>
-</div>
+</div><br><br>
 
-</body>
-
-</html>
+<?php include "footer.php" ?>
