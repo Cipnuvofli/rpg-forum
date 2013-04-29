@@ -50,17 +50,23 @@ while($row = mysql_fetch_assoc($result))
 }
 if(isset($_SESSION['loggedin']))
 {
-	echo'<script type="text/javascript" src="../jscripts/tiny_mce/tiny_mce.js"></script>';
+	
 
-echo'<script type="text/javascript">';
+echo'<script type="text/javascript" src="tinymce/js/tinymce/tinymce.min.js">';
 echo'tinyMCE.init({';
-       echo 'mode : "textareas"';
+	   echo 'theme: "advanced",';
+       echo 'mode : "exact",';
+	   echo 'elements: "content",';
+	   echo 'theme_advanced_toolbar_location: "top",';
+	   echo 'theme_advanced_buttons1: "bold, italic"';
+	   echo 'plugins : "bbcode"';
+	   
 echo '});';
 echo '</script>';
 
 echo'<form method="post" action="insertpost.php">';
         echo'<p>' ;
-               echo' <textarea name="content" cols="50" rows="15">This is some content that will be editable with TinyMCE.</textarea>';
+               echo' <textarea id = "content" name="content" cols="50" rows="15"></textarea>';
                 echo'<input type="submit" value="Reply" />';
         echo'</p>';
 echo'</form>';
