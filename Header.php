@@ -7,6 +7,17 @@
 		<title>Quest[x].com</title>
 		 <meta name="description" content="The Message Board Designed from the ground up for Play by post roleplaying.">
         <link rel = "stylesheet" type="text/css" href ="CSS/Quest[x].css">
+		<script type="text/javascript" src="tinymce/js/tinymce/tinymce.min.js"></script>
+		<script type = "text/javascript">
+		tinyMCE.init({
+		theme : "modern",
+		selector : "textarea",
+		plugins : " bbcode link image media code",
+		toolbar : "bold italic underline strikethrough| alignleft aligncenter alignright| numlist bullist outdent indent| link unlink image media | code quote",
+		width : 1,
+		height: 1,
+		});
+		</script>
 </head>
 
 <body>
