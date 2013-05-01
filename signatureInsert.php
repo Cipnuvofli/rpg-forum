@@ -2,7 +2,7 @@
 
 session_start();
 
-$signature = $_POST['Signature'];
+$signature = mysql_real_escape_string($_POST['signature']);
 
 $con = mysql_connect("localhost","root","Gwhnsf@76244");
 
@@ -12,7 +12,7 @@ if (!$con)
 }
 mysql_select_db("members", $con);
 
-$sql = "INSERT INTO users (Signature) VALUES ('$signature')";
+$sql = "INSERT INTO users (Signature)VALUES('$signature')";
 $result = mysql_query($sql) or die(mysql_error());
 
 
