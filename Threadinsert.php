@@ -25,5 +25,5 @@ $result = mysql_query($sql) or die(mysql_error());
 mysql_close($con);
 
 
-header("Location: Home.php");
+header("Location: Topic.php");
 ?>

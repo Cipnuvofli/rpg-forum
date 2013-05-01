@@ -11,9 +11,11 @@
 		<script type = "text/javascript">
 		tinyMCE.init({
 		theme : "modern",
+		menubar: false,
 		selector : "textarea",
-		plugins : " bbcode link image media code",
-		toolbar : "bold italic underline strikethrough| alignleft aligncenter alignright| numlist bullist outdent indent| link unlink image media | code quote",
+		plugins : " emoticons bbcode link image media code preview",
+		toolbar1 : "emoticons undo redo removeformat preview",
+		toolbar2 : "bold italic underline strikethrough| alignleft aligncenter alignright| numlist bullist outdent indent| link unlink image media | code",
 		width : 1,
 		height: 1,
 		});
