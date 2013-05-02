@@ -12,6 +12,7 @@
 		tinyMCE.init({
 		theme : "modern",
 		menubar: false,
+		statusbar: false,
 		selector : "textarea",
 		plugins : " emoticons bbcode link image media code preview",
 		toolbar1 : "emoticons undo redo removeformat preview",

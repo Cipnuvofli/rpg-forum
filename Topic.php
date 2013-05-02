@@ -50,13 +50,14 @@ while($row = mysql_fetch_assoc($result))
 }
 if(isset($_SESSION['loggedin']))
 {
-	
-
+echo '<div class = "Reply">';	
+echo'<p>';
 echo'<form method="post" action="insertpost.php">';
-               echo' <textarea id = "content" name="content" cols="50" rows="15"></textarea>';
+               echo' <textarea id = "content" name="content" cols="1" rows="1"></textarea>';
                 echo'<input type="submit" value="Reply" />';
 echo'</form>';
-
+echo'</p>';
+echo '</div>';
 
 }
 ?>
