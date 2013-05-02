@@ -3,11 +3,22 @@
 session_start();
 
 
-$threadid = $_POST['threadid'];
 $content = $_POST['content'];
 $poster =  $_SESSION['name'];
-$story =  $_POST['story'];
 $timestamp = $_SERVER['REQUEST_TIME'];
+$Threadtitle = $_POST['Title'];
+if(isset($_POST['Story']) == false)
+{
+	$story = 0;
+}
+else if($_POST['Story'] == 'yes')
+{
+	$story = 1;
+}
+else
+{
+	$story = 0;
+}
 
 $con = mysql_connect("localhost","root","Gwhnsf@76244");
 
@@ -17,13 +28,12 @@ if (!$con)
 }
 mysql_select_db("threads", $con);
 
-$id = "SELECT id, title FROM Topics WHERE id = ";
+$id = "SELECT id FROM Topics WHERE title = '$Threadtitle'";
 $iterator = mysql_query($id) or die(mysql_error());
-while($row = mysql_fetch_assoc($iterator))
-{
-	$threadid = $row['id'];
-}
-$threadid = $threadid+1;
+$row = mysql_fetch_assoc($iterator);
+$threadid = $row['id'];
+
+
 
 
 

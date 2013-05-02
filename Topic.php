@@ -20,13 +20,13 @@ $Storyonly = $_GET['storyonly'];
  
 $sql = "SELECT Postid, Timestamp, Content, Poster, Story FROM posts WHERE Threadid = $queryid ";
 
-$OP = "SELECT originalposter From topics WHERE id = $queryid";
+$OP = "SELECT originalposter, title From topics WHERE id = $queryid";
 
 $result = mysql_query($sql) or die(mysql_error());
 $bird = mysql_query($OP) or die(mysql_error());
 
 $r2 = mysql_fetch_assoc($bird);
-
+$reftitle = $r2['title'];
 $huh = $r2['originalposter'];
 if($Storyonly == 1)
 {
@@ -86,12 +86,12 @@ echo '<div class = "Reply">';
 echo'<p>';
 echo'<form method="post" action="insertpost.php">';
                echo' <textarea id = "content" name="content" cols="1" rows="1"></textarea>';
-                echo'<input type="submit" value="Reply" />';
-				
+                echo'<input type="submit" value="Reply" />';	
 				if($_SESSION['name'] == $huh)
 				{
 					echo'<p> Story:<input type="checkbox" name="Story" value="yes"></p>';
 				}
+				echo'<input type="hidden" name="Title" value="'.$reftitle.'">';
 echo'</form>';
 echo'</p>';
 echo '</div>';

@@ -14,7 +14,7 @@ $result = mysql_query($sql) or die(mysql_error());
 echo '<div id = "Topics">';
   
 $topics = 0;  
-while($row = mysql_fetch_assoc($result) and $topics<4)
+while($row = mysql_fetch_assoc($result) and $topics<5)
 {
 	$postdate = $row['postdate'];
 	$title = $row['title'];
