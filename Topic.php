@@ -28,6 +28,7 @@ $bird = mysql_query($OP) or die(mysql_error());
 $r2 = mysql_fetch_assoc($bird);
 $reftitle = $r2['title'];
 $huh = $r2['originalposter'];
+
 if($Storyonly == 1)
 {
 	while($row = mysql_fetch_assoc($result))
@@ -40,11 +41,16 @@ if($Storyonly == 1)
 		
 		if($Story == 1)
 		{
+		mysql_select_db("members", $con);
+		$avi = "SELECT Avatar from users WHERE Username = '$Poster'";
+		$aviquery =  mysql_query($avi) or die(mysql_error());
+		$r3 = mysql_fetch_assoc($aviquery);
+		$blarg = $r3['Avatar'];
 		echo '<div class = "Post">';
 		echo '<div class = "user">';
 		echo '<p>'.$Poster.'</p>';
 		echo '<div class = "avatar">';
-		echo '<img src = "Images/Avatars/0.jpg">';
+		echo '<img src ="'.$blarg.'">';
 		echo '</div>';
 		echo '</div>';
 		echo '<div class = "content">';
@@ -64,12 +70,16 @@ while($row = mysql_fetch_assoc($result))
 	$Poster = $row['Poster'];
 	$Story = $row['Story'];
 	
-	
+	mysql_select_db("members", $con);
+	$avi = "SELECT Avatar from users WHERE Username = '$Poster'";
+	$aviquery =  mysql_query($avi) or die(mysql_error());
+	$r3 = mysql_fetch_assoc($aviquery);
+	$blarg = $r3['Avatar'];
 	echo '<div class = "Post">';
 	echo '<div class = "user">';
 	echo '<p>'.$Poster.'</p>';
 	echo '<div class = "avatar">';
-	echo '<img src = "Images/Avatars/0.jpg">';
+	echo '<img src = "'.$blarg.'">';
 	echo '</div>';
 	echo '</div>';
 	echo '<div class = "content">';
