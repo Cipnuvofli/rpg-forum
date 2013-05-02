@@ -15,15 +15,15 @@
 	</font>
 	
 	<textarea name="ThreadStory" cols="52" rows="6" style="margin-left:2em"></textarea><br>
+	<p>Genre:</p>
 	<select name = "Genre" style="margin-left:2em;margin-bottom:2em">
-		<option>Select Genre</option>
 		<option value="Quest">Quest</option>
 		<option value="Roleplay">Roleplay</option>
 		<option value="Fiction">Fiction</option>
 		<option value="Generic">Generic</option>
 	</select><br>
 	
-	<font size="4" color="#b19b37" style="margin-left:2em">Create choices for users to vote for: </font><br>
+	<font size="4" color="#b19b37" style="margin-left:2em">Voting Options: </font><br>
 	
 	<div style="color:#FFFFFF;margin-left:3.5em"> First Choice: <input type="text" name="First" size="80" style="margin-left:1.95em;margin-top:1em">
 	</div>

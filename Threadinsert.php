@@ -33,13 +33,20 @@ $query1 = mysql_query("SHOW TABLE STATUS WHERE name='$table1'");
 $query2 = mysql_query("SHOW TABLE STATUS WHERE name='$table2'");
 $row1 = mysql_fetch_array($query1);
 $row2 = mysql_fetch_array($query2);
-$threadid = $row1["AUTO_INCREMENT"];
-$postid = $row2["AUTO_INCREMENT"];
+$threadid = 0;
+
+$id = "SELECT id FROM Topics";
+$iterator = mysql_query($id) or die(mysql_error());
+while($row = mysql_fetch_assoc($iterator))
+{
+	$threadid = $row['id'];
+}
+$threadid = $threadid+1;
 
 $sql = "INSERT INTO topics (title,  postdate, genre, originalposter)VALUES('$title', '$postdate', '$Category','$OP')";
-$posts = "INSERT INTO posts (postid, threadid, timestamp, content, poster, Story)VALUES('$postid', '$threadid', '$timestamp', '$Content', '$OP', '$Story')";
+$posts = "INSERT INTO posts (threadid, timestamp, content, poster, Story)VALUES('$threadid', '$timestamp', '$Content', '$OP', '$Story')";
 $result = mysql_query($sql) or die(mysql_error());
-
+$result2 = mysql_query($posts) or die(mysql_error());
 
 
 
