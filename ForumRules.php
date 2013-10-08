@@ -25,9 +25,8 @@
 
   <body>
   
-  <div id="header" style="color:#b19b37;text-align:center;border:.3em outset #b19b37;margin-left:15em;margin-right:15em;">
-  <font size="6">Forum Rules
-  </font>
+  <div id="header">
+  <p>Forum Rules</p>
   </div>
   
   

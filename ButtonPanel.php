@@ -3,6 +3,7 @@
  <li><a href="home.php">Home</a></li>
  <li><a href="Tutorial.php">FAQ</a></li>
  <?php
+ session_start();
  if(isset($_SESSION['loggedin']))
  {
 	echo '<li><a href="CreateThread.php">Create Thread</a></li>';

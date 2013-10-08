@@ -1,8 +1,8 @@
 <?php include "Header.php"?>
-
+<?php include "ButtonPanel.php"?>
 <?php include "usercard.php"?>
 
-<?php include "ButtonPanel.php"?>
+
 
 <?php 
 
@@ -22,8 +22,8 @@ else if($_SESSION['rank']==1)
 }
 else
 {
-	echo '<li><p class = "Tabs">Members</p></li>';
-	echo '<li><p class = "Tabs">Subforums</p></li>';
+	echo '<li class = "Tabs"><p>Members</p></li>';
+	echo '<li class = "Tabs"><p>Subforums</p></li>';
 
 }
 ?>

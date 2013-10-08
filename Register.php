@@ -1,4 +1,5 @@
 <?php include "header.php"?>
+<?php include "ButtonPanel.php"?>
   
 <div id = "Registration form">
 <form action="rp.php" method = "post">

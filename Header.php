@@ -26,7 +26,7 @@
 <body>
        
         <a href = "home.php"  style="color: rgb(0,0,0)">
-        <canvas id="Logo" width="320" height="100" style="border:.2em outset #b19b37"></canvas>
+        <canvas id="Logo" width="320" height="100" style="border:.2em solid #b19b37"></canvas>
         <script>
     var canvas = document.getElementById('Logo');
     var context = canvas.getContext('2d');
