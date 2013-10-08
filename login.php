@@ -36,19 +36,20 @@ $hashed_pass = crypt($password, $Blowfish_Pre.$row['salt'].$Blowfish_End);
 
 if($username == $row['Username'] && $hashed_pass == $row['password'])
 {
-	echo '<p>Login Successful!</p>';
+	
 	$_SESSION['loggedin'] = "YES";
 	$_SESSION['name'] = $username;
 	$_SESSION['writeins'] = $writeins;
 	$_SESSION['Likes received'] = $likes;
 	$_SESSION['postcount'] = $postcount;
 	$_SESSION['Avatar'] = $avvie;
-	echo'<a href = "Home.php">go to home page</a>';
+	header( 'Location: Home.php' ) ;
+	
 }
 else
 {
 	echo '<p>Login Failure</P>';
-	echo '<a href = "Home.php">go to home page</a>';
+	echo '<a href = "Home.php">Return to home page</a>';
 }
 mysql_close($con);
 

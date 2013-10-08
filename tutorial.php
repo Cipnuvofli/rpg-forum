@@ -7,7 +7,7 @@
 <body>
 
 <div id="tutorial">
-<div id="header" style="color:#b19b37;text-align:center;border:.3em outset #b19b37;margin-left:20em;margin-right:20em;">
+<div id="header" style="color:#b19b37;text-align:center;border:.1em solid #b19b37;margin-left:20em;margin-right:20em;">
 <font size="6">FAQ
 </font>
 </div>
