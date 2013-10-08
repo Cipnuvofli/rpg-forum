@@ -22,7 +22,7 @@ $username = mysql_real_escape_string($_POST['Username']);
 $password = mysql_real_escape_string($_POST['Password']);
 
 
-$sql = "SELECT Username, salt, password, Writeins, `Likes received`, Avatar, Postcount FROM users WHERE Username = '$username'";
+$sql = "SELECT Username, salt, password, Writeins, `Likes received`, Avatar, Postcount, rank FROM users WHERE Username = '$username'";
 $result = mysql_query($sql) or die(mysql_error());
 $row = mysql_fetch_assoc($result);
 
@@ -30,6 +30,7 @@ $writeins = $row['Writeins'];
 $likes = $row['Likes received'];
 $postcount = $row['Postcount'];
 $avvie = $row['Avatar'];
+$rank = $row['rank'];
 
 
 $hashed_pass = crypt($password, $Blowfish_Pre.$row['salt'].$Blowfish_End);
@@ -43,6 +44,7 @@ if($username == $row['Username'] && $hashed_pass == $row['password'])
 	$_SESSION['Likes received'] = $likes;
 	$_SESSION['postcount'] = $postcount;
 	$_SESSION['Avatar'] = $avvie;
+	$_SESSION['rank'] = $rank;
 	echo'<a href = "Home.php">go to home page</a>';
 }
 else

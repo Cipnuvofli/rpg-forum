@@ -11,7 +11,7 @@ if(isset($_SESSION['loggedin']))
         echo '<p class  = "Stats">Post Count: '.$_SESSION['postcount'].'</p>';
         echo '<p class  = "Stats">Character Sheets: TODO</p>';
 		
-		echo '<p id = "Avatarchange"><a href = "personal.php">Change my Avatar/Sig</a></p>';
+		echo '<p id = "Avatarchange"><a href = "personal.php">Edit my Profile</a></p>';
 		echo '<p id = "Login"><a href = "logout.php">Log out</a></p>';
         echo '</div>';
 }
