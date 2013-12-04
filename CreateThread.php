@@ -34,7 +34,7 @@
 	<p>Fourth Choice: <input type="text" name="Fourth" size="80"></p>
 
 	
-	<input type="submit" value="Submit"><br> 
+	<input type="submit" id="Createthread" value="Submit"><br> 
 	
 
 </form>
