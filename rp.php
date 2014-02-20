@@ -22,7 +22,11 @@ if (!$con)
   mysql_select_db("members", $con);
  //Special Thanks to Greg Bogg's tutorial on using blowfish hashing for Passwords
 $agreement = $_POST['rules'];
-$Birthday = mysql_real_escape_string($_POST['bday']);
+$month = $_POST['dobm'];
+$day = $_POST['dobd'];
+$year= $_POST['doby'];
+$date = strtotime($day.'-'.$month.'-'.$year);
+$Birthday = date("Y-m-d", $date);
 $Email = mysql_real_escape_string($_POST['usrEmail']);
 $name = mysql_real_escape_string($_POST['name']);
 $password = mysql_real_escape_string($_POST['Pw']);
@@ -53,7 +57,7 @@ if($securimage->check($Captcha) == true &&isset($agreement)&& $agreement == 'yes
 {
 echo "<p>Registration Successful!.</p><br/><br/>";
 
-$sql="INSERT INTO users (Joindate, salt, password, birthday, email, Username)VALUES('$mysql_date', '$salt', '$hashed_password','$Birthday','$Email','$name')";
+$sql="INSERT INTO users (Joindate, salt, password, birthday, email, Username, avatar, Rank)VALUES('$mysql_date', '$salt', '$hashed_password','$Birthday','$Email','$name', 'images/avatars/1.jpg', '2')";
 }
 else if($agreement != 'yes')
 {

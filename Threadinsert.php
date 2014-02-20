@@ -6,6 +6,19 @@ $title = $_POST['Title'];
 $Category = $_POST['Genre'];
 $OP = $_SESSION['name'];
 $postdate = date( 'Y-m-d' );
+$locked = $_POST['Lock'];
+if(isset($locked))
+{
+	if($locked == "yes")
+	{
+	$locked = 1;
+	}
+	else
+	{
+	$locked = 0;
+	}
+}
+
 
 $timestamp = $_SERVER['REQUEST_TIME'];
 $Content = $_POST['ThreadStory'];
@@ -43,7 +56,7 @@ while($row = mysql_fetch_assoc($iterator))
 }
 $threadid = $threadid+1;
 
-$sql = "INSERT INTO topics (title,  postdate, genre, originalposter)VALUES('$title', '$postdate', '$Category','$OP')";
+$sql = "INSERT INTO topics (title,  postdate, genre, originalposter, locked)VALUES('$title', '$postdate', '$Category','$OP', '$locked')";
 $posts = "INSERT INTO posts (threadid, timestamp, content, poster, Story)VALUES('$threadid', '$timestamp', '$Content', '$OP', '$Story')";
 $result = mysql_query($sql) or die(mysql_error());
 $result2 = mysql_query($posts) or die(mysql_error());

@@ -6,7 +6,7 @@
 
 <div id="tutorial">
 
-<p id = "header">FAQ
+<p id = "headerT">FAQ
 </p>
 
 
@@ -23,6 +23,10 @@
 
 <p class = "Question">What is a Quest Thread?</p><br>
 <p class = "answer">The quest thread is a form of play-by-post roleplaying where the board of players controls a single entity by voting on its actions, usually one character for standard quests, or an entire organization or country if the quest is an empire builder. </p>
+<br><br>
+
+<p class = "Question">What Do the thread colors mean?</p><br>
+<p class = "answer">Gray threads aren't related to some matter of creative work. Purple Threads are stories and fanfiction. Red Threads are for conventional roleplaying, such as Dungeons and Dragons/Pathfinder. Green Threads are quest threads. </p>
 <br><br>
 
 <br><br>

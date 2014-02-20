@@ -34,8 +34,11 @@ $rank = $row['rank'];
 
 
 $hashed_pass = crypt($password, $Blowfish_Pre.$row['salt'].$Blowfish_End);
-
-if($username == $row['Username'] && $hashed_pass == $row['password'])
+if($rank == 3)
+{
+	echo '<p>You have been banned!</p>';
+}
+else if($username == $row['Username'] && $hashed_pass == $row['password'] && rank!=3)
 {
 	
 	$_SESSION['loggedin'] = "YES";
@@ -47,6 +50,7 @@ if($username == $row['Username'] && $hashed_pass == $row['password'])
 	$_SESSION['rank'] = $rank;
 	header( 'Location: Home.php' ) ;
 }
+
 else
 {
 	echo '<p>Login Failure</P>';
