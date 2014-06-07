@@ -9,12 +9,13 @@
 if(!isset($_SESSION['rank']))
 {
 	echo '<p>You shouldn\'t be here. </p>';
-
+	//TODO: Output this to a log
 }
 
 else if($_SESSION['rank']!= 0)
 {
 	echo "<p>You Shouldn't be here, ".$_SESSION['name'].".</p>";
+	//TODO: Output this to a log
 }
 else if($_SESSION['rank']==1)
 {
@@ -23,8 +24,8 @@ else if($_SESSION['rank']==1)
 else
 {
 
-
-	echo '<li class = "Members"><a href = "Members.php">Members</a></li>';
+	
+	echo '<li class = "Members"><a href = "Members.php">Members</a></li>';//Takes you to the list of members for things like promotions, and bannings
 
 
 }

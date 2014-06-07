@@ -1,4 +1,5 @@
 <?php
+//This is something I'd need to get an actual hosting provider to test properly. It's meant as a password recovery mechanism
 $con = mysql_connect("localhost","root","Gwhnsf@76244");
 
 if (!$con)

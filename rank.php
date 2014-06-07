@@ -3,6 +3,7 @@ session_start();
 if(!isset($_SESSION['rank']))
 {
 	echo '<p>You shouldn\'t be here. </p>';
+	//TODO: Output this to a log
 }
 
 else if($_SESSION['rank']==1 || $_SESSION['rank'] == 0 )

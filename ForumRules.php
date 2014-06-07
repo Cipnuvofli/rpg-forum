@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-
+<!--This is a stub page. You will learn nothing of note here -->
 <head>
   <meta charset="utf-8">
   <title>Quest[x].com</title>

@@ -1,4 +1,4 @@
-
+<!--Logo and TinyMCE Script -->
 
 <!DOCTYPE html>
 <html lang = "en">
@@ -8,7 +8,7 @@
 		 <meta name="description" content="The Message Board Designed from the ground up for Play by post roleplaying.">
         <link rel = "stylesheet" type="text/css" href ="CSS/Quest[x].css">
 		<script type="text/javascript" src="tinymce/js/tinymce/tinymce.min.js"></script>
-		<script type = "text/javascript">
+		<script type = "text/javascript">//This handles the Text editor for posts
 		tinyMCE.init({
 		theme : "modern",
 		menubar: false,
@@ -26,7 +26,7 @@
 <body>
        
         <a href = "home.php"  style="color: rgb(0,0,0)">
-        <canvas id="Logo" width="320" height="100" style="border:.2em solid #b19b37"></canvas>
+        <canvas id="Logo" width="320" height="100" style="border:.2em solid #b19b37"></canvas><!--This renders the logo.  -->
         <script>
     var canvas = document.getElementById('Logo');
     var context = canvas.getContext('2d');
